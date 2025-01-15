@@ -32,6 +32,14 @@
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
         }
+      ],
+      [
+        "@sentry/react-native/expo",
+        {
+          "url": "https://log.immergo.tv/",
+          "project": "rjr-mobile",
+          "organization": "immergo-x0"
+        }
       ]
     ],
     "experiments": {

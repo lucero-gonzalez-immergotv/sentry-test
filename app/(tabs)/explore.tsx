@@ -1,4 +1,4 @@
-import { StyleSheet, Image, Platform } from 'react-native';
+import { StyleSheet, Image, Platform, Button } from 'react-native';
 
 import { Collapsible } from '@/components/Collapsible';
 import { ExternalLink } from '@/components/ExternalLink';
@@ -38,6 +38,8 @@ export default function TabTwoScreen() {
         </ExternalLink>
       </Collapsible>
       <Collapsible title="Android, iOS, and web support">
+      <Button title='Try!' onPress={ () => { Sentry.captureException(new Error('First error')) }}/>
+l
         <ThemedText>
           You can open this project on Android, iOS, and the web. To open the web version, press{' '}
           <ThemedText type="defaultSemiBold">w</ThemedText> in the terminal running this project.
@@ -51,7 +53,7 @@ export default function TabTwoScreen() {
         </ThemedText>
         <Image source={require('@/assets/images/react-logo.png')} style={{ alignSelf: 'center' }} />
         <ExternalLink href="https://reactnative.dev/docs/images">
-          <ThemedText type="link">Learn more</ThemedText>
+          <ThemedText type="link">EXPLORE</ThemedText>
         </ExternalLink>
       </Collapsible>
       <Collapsible title="Custom fonts">
