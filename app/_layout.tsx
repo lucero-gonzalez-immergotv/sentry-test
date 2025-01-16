@@ -7,11 +7,16 @@ import { useEffect } from 'react';
 import 'react-native-reanimated';
 
 import { useColorScheme } from '@/hooks/useColorScheme';
+import * as Sentry from "@sentry/react-native";
 
-// Prevent the splash screen from auto-hiding before asset loading is complete.
+// Inicialización de Sentry
+Sentry.init({
+  dsn: "https://d90c53092370011def720bfd1afb18ca@o4508645419188224.ingest.us.sentry.io/4508650947739648",
+});
+
 SplashScreen.preventAutoHideAsync();
 
-export default function RootLayout() {
+function RootLayout() {
   const colorScheme = useColorScheme();
   const [loaded] = useFonts({
     SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
@@ -37,3 +42,6 @@ export default function RootLayout() {
     </ThemeProvider>
   );
 }
+
+// Envolver el componente con Sentry.wrap
+export default Sentry.wrap(RootLayout);

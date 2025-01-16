@@ -32,6 +32,14 @@
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
         }
+      ],
+      [
+        "@sentry/react-native/expo",
+        {
+          "url": "https://sentry.io/",
+          "project": "12-7d",
+          "organization": "immergo-x0"
+        }
       ]
     ],
     "experiments": {
