@@ -36,8 +36,8 @@
       [
         "@sentry/react-native/expo",
         {
-          "url": "https://log.immergo.tv/",
-          "project": "rjr-mobile",
+          "url": "https://sentry.io/",
+          "project": "12-7d",
           "organization": "immergo-x0"
         }
       ]
