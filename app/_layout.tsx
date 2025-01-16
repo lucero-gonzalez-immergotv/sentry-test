@@ -9,7 +9,6 @@ import 'react-native-reanimated';
 import { useColorScheme } from '@/hooks/useColorScheme';
 import * as Sentry from "@sentry/react-native";
 
-// Inicialización de Sentry
 Sentry.init({
   dsn: "https://d90c53092370011def720bfd1afb18ca@o4508645419188224.ingest.us.sentry.io/4508650947739648",
 });
@@ -43,5 +42,4 @@ function RootLayout() {
   );
 }
 
-// Envolver el componente con Sentry.wrap
 export default Sentry.wrap(RootLayout);
